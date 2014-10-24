@@ -77,6 +77,14 @@ public abstract class BaseActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onStop();
 	}
+	
+	/**
+	 * Init all after setContentView
+	 */
+	public void init(){
+		findViewById();
+		initView();
+	}
 
 	/**
 	 * 绑定控件id
@@ -93,7 +101,7 @@ public abstract class BaseActivity extends Activity {
 	 * 
 	 * @param pClass
 	 */
-	protected void openActivity(Class<?> pClass) {
+	public void openActivity(Class<?> pClass) {
 		openActivity(pClass, null);
 	}
 

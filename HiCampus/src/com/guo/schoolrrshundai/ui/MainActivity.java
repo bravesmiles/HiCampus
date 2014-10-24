@@ -22,12 +22,12 @@ import com.google.gson.reflect.TypeToken;
 import com.guo.adapter.ExchangedInfoAdapter;
 import com.guo.entity.Order;
 import com.guo.ui.base.BaseActivity;
-import com.guo.ui.base.ButtonClickListener;
 import com.guo.utils.Constants;
 import com.guo.utils.DataPoster;
 import com.smiles.campus.R;
 import com.smiles.campus.map.BMapApiDemoMain;
 import com.smiles.campus.map.BaseMapDemo;
+import com.smiles.campus.ui.listener.ButtonClickListener;
 
 public class MainActivity extends BaseActivity {
 	private ListView exchangedInfo_listview;
@@ -37,15 +37,9 @@ public class MainActivity extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		findViewById();
-		initView();
-
-		// Binding UI and action
-		infoButton = (Button) findViewById(R.id.button2);
+		init();
 		// mCurrentMode = LocationMode.NORMAL;
 		// requestLocButton.setText("普通");
-		OnClickListener btnClickListener = new ButtonClickListener(this);
-		infoButton.setOnClickListener(btnClickListener);
 	}
 
 	@Override
@@ -115,12 +109,15 @@ public class MainActivity extends BaseActivity {
 	protected void findViewById() {
 		// TODO Auto-generated method stub
 		exchangedInfo_listview = (ListView) findViewById(R.id.exchangedInfo_listview);
+		// Binding UI and action
+		infoButton = (Button) findViewById(R.id.button2);
 	}
 
 	@Override
 	protected void initView() {
 		// TODO Auto-generated method stub
-
+		OnClickListener btnClickListener = new ButtonClickListener(this);
+		infoButton.setOnClickListener(btnClickListener);
 	}
 
 }
