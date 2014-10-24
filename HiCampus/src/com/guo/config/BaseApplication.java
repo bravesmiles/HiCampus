@@ -5,7 +5,7 @@ import android.content.res.Configuration;
 import android.database.Cursor;
 
 import com.guo.DB.UserDB;
-import com.guo.utils.LogUtil;
+import com.smiles.campus.utils.LogUtil;
 
 public class BaseApplication extends Application {
 
