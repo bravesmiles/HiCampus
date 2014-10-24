@@ -177,7 +177,8 @@
             android:process=":remote" >
         </service>
 
-        <!-- <activity
+        <!--
+        <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
             android:windowSoftInputMode="adjustResize|stateHidden" >
@@ -185,7 +186,12 @@
 
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" /> -->
+            android:value="@integer/google_play_services_version" />
+        -->
+        <activity
+            android:name=".ui.LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
     </application>
 
     <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >

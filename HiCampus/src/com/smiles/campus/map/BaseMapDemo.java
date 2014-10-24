@@ -18,13 +18,14 @@ import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.map.TextOptions;
 import com.baidu.mapapi.map.BaiduMap.OnMarkerDragListener;
 import com.baidu.mapapi.model.LatLng;
+import com.guo.ui.base.BaseActivity;
 import com.smiles.campus.R;
 import com.smiles.campus.service.RestServiceImpl;
 
 /**
  * 演示MapView的基本用法
  */
-public class BaseMapDemo extends Activity {
+public class BaseMapDemo extends BaseActivity {
 	@SuppressWarnings("unused")
 	private static final String LTAG = BaseMapDemo.class.getSimpleName();
 	private MapView mMapView;
@@ -131,6 +132,18 @@ public class BaseMapDemo extends Activity {
 		super.onDestroy();
 		// activity 销毁时同时销毁地图控件
 		mMapView.onDestroy();
+	}
+
+	@Override
+	protected void findViewById() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void initView() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

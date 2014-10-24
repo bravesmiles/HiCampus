@@ -9,6 +9,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Spanned;
+import android.view.View.OnClickListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +18,11 @@ import com.smiles.campus.R;
 
 public abstract class BaseActivity extends Activity {
 
+	/**
+	 * Check if user already logged
+	 */
+	private static boolean isLogged;
+	
 	public static final String TAG = BaseActivity.class.getSimpleName();
 
 	protected Handler mHandler = null;
@@ -160,6 +166,14 @@ public abstract class BaseActivity extends Activity {
 	protected void showAlertDialog(String title, Spanned spanned, String positiveText, DialogInterface.OnClickListener onPositiveClickListener, String negativeText,
 			DialogInterface.OnClickListener onNegativeClickListener) {
 		new AlertDialog.Builder(this).setTitle(title).setMessage(spanned).setPositiveButton(positiveText, onPositiveClickListener).setNegativeButton(negativeText, onNegativeClickListener).show();
+	}
+
+	public static boolean isLogged() {
+		return isLogged;
+	}
+
+	public static void setLogged(boolean isLogged) {
+		BaseActivity.isLogged = isLogged;
 	}
 
 }

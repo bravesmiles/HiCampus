@@ -22,6 +22,7 @@ import com.google.gson.reflect.TypeToken;
 import com.guo.adapter.ExchangedInfoAdapter;
 import com.guo.entity.Order;
 import com.guo.ui.base.BaseActivity;
+import com.guo.ui.base.ButtonClickListener;
 import com.guo.utils.Constants;
 import com.guo.utils.DataPoster;
 import com.smiles.campus.R;
@@ -38,18 +39,12 @@ public class MainActivity extends BaseActivity {
 		setContentView(R.layout.activity_main);
 		findViewById();
 		initView();
-		
+
 		// Binding UI and action
 		infoButton = (Button) findViewById(R.id.button2);
-//		mCurrentMode = LocationMode.NORMAL;
-//		requestLocButton.setText("普通");
-		OnClickListener btnClickListener = new OnClickListener() {
-			public void onClick(View v) {
-				Intent intent = null;
-				intent = new Intent(MainActivity.this, BaseMapDemo.class);
-				startActivity(intent);
-			}
-		};
+		// mCurrentMode = LocationMode.NORMAL;
+		// requestLocButton.setText("普通");
+		OnClickListener btnClickListener = new ButtonClickListener(this);
 		infoButton.setOnClickListener(btnClickListener);
 	}
 
@@ -73,7 +68,8 @@ public class MainActivity extends BaseActivity {
 
 		@Override
 		protected String doInBackground(String... arg0) {
-			return new DataPoster().myHttpPostData(MainActivity.class, arg0[0], array1, array2);
+			return new DataPoster().myHttpPostData(MainActivity.class, arg0[0],
+					array1, array2);
 		}
 
 		@Override
@@ -94,12 +90,16 @@ public class MainActivity extends BaseActivity {
 					Gson gson = new Gson();
 					LinkedList<Order> infos = gson.fromJson(result, listType);
 					List<String> list = new ArrayList<String>();
-					for (Iterator iterator = infos.iterator(); iterator.hasNext();) {
+					for (Iterator iterator = infos.iterator(); iterator
+							.hasNext();) {
 						Order info = (Order) iterator.next();
-						list.add("恭喜用户:" + info.getUserId() + "兑换" + info.getCount() + "积分的" + Constants.getDetailWay(info.getWay()) + "成功！");
+						list.add("恭喜用户:" + info.getUserId() + "兑换"
+								+ info.getCount() + "积分的"
+								+ Constants.getDetailWay(info.getWay()) + "成功！");
 					}
 
-					exchangedInfo_listview.setAdapter(new ExchangedInfoAdapter(list, MainActivity.this));
+					exchangedInfo_listview.setAdapter(new ExchangedInfoAdapter(
+							list, MainActivity.this));
 				}
 				if ("sign".equals(type)) {
 					cancelProgressDialog();
@@ -122,4 +122,5 @@ public class MainActivity extends BaseActivity {
 		// TODO Auto-generated method stub
 
 	}
+
 }
