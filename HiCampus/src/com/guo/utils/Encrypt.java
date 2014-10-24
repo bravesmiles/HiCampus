@@ -8,6 +8,8 @@ import java.security.interfaces.RSAPublicKey;
 
 import javax.crypto.Cipher;
 
+import com.smiles.campus.utils.LogUtil;
+
 /**
  * description: cateT
  * 

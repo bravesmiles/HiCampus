@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.guo.utils.Encrypt;
-import com.guo.utils.LogUtil;
+import com.smiles.campus.utils.LogUtil;
 
 public class UserDB extends SQLiteOpenHelper {
 	private final static String DATABASE_NAME = "users.db";

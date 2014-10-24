@@ -26,6 +26,8 @@ import org.apache.http.params.HttpProtocolParams;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 
+import com.smiles.campus.utils.LogUtil;
+
 /**
  * the class to connect server
  * 
