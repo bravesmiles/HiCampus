@@ -23,7 +23,7 @@ import com.guo.adapter.ExchangedInfoAdapter;
 import com.guo.entity.Order;
 import com.guo.ui.base.BaseActivity;
 import com.guo.utils.Constants;
-import com.guo.utils.DataPoster;
+import com.guo.utils.RestUtil;
 import com.smiles.campus.R;
 import com.smiles.campus.map.BMapApiDemoMain;
 import com.smiles.campus.map.BaseMapDemo;
@@ -62,7 +62,7 @@ public class MainActivity extends BaseActivity {
 
 		@Override
 		protected String doInBackground(String... arg0) {
-			return new DataPoster().myHttpPostData(MainActivity.class, arg0[0],
+			return RestUtil.postData(MainActivity.class, arg0[0],
 					array1, array2);
 		}
 

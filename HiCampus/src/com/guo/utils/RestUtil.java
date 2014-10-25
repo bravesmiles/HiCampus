@@ -34,7 +34,7 @@ import com.smiles.campus.utils.LogUtil;
  * @author gzm
  * 
  */
-public class DataPoster {
+public class RestUtil {
 	public static final String NET_ERROR = "neterror";
 
 	/**
@@ -50,7 +50,7 @@ public class DataPoster {
 	 *            BasicNameValuePair's parameters value
 	 * @return result
 	 */
-	public String myHttpPostData(Class<?> cls, String baseurl, String[] keyItem, String[] valueItem) {
+	public static String postData(Class<?> cls, String baseurl, String[] keyItem, String[] valueItem) {
 		String resurl = baseurl + "?";
 		String result = null;
 		HttpClient httpClient = null;
@@ -102,7 +102,7 @@ public class DataPoster {
 	 * @return result invoke eg: String return_str = new HttpDownloader().getDataFromNet(Config.GETHUSHI_AND_PATI_URL + "?loginid=" + Config.NOWPEOPLEID + "&loginpasswd=" + Config.NOWPEOPLEPASSWD +
 	 *         "&actions=GetPatiInfo2" + "&inpatiid=" + saomiaores);
 	 */
-	public String getDataFromNet(Class<?> cls, String url) {
+	public static String getData(Class<?> cls, String url) {
 		HttpParams params = new BasicHttpParams();
 		HttpProtocolParams.setVersion(params, HttpVersion.HTTP_1_1);
 		HttpProtocolParams.setContentCharset(params, HTTP.DEFAULT_CONTENT_CHARSET);
