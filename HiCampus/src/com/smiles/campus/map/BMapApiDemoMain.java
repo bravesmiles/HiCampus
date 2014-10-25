@@ -76,7 +76,7 @@ public class BMapApiDemoMain extends Activity {
 
 	private static final DemoInfo[] demos = {
 			new DemoInfo(R.string.demo_title_basemap,
-					R.string.demo_desc_basemap, BaseMapDemo.class),
+					R.string.demo_desc_basemap, CampusMap.class),
 			new DemoInfo(R.string.demo_title_map_fragment,
 					R.string.demo_desc_map_fragment, MapFragmentDemo.class),
 			new DemoInfo(R.string.demo_title_multimap,

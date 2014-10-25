@@ -320,7 +320,7 @@ public class OfflineDemo extends Activity implements MKOfflineMapListener {
 					Intent intent = new Intent();
 					intent.putExtra("x", e.geoPt.longitude);
 					intent.putExtra("y", e.geoPt.latitude);
-					intent.setClass(OfflineDemo.this, BaseMapDemo.class);
+					intent.setClass(OfflineDemo.this, CampusMap.class);
 					startActivity(intent);
 				}
 			});

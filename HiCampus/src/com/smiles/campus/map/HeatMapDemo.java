@@ -28,7 +28,7 @@ import com.baidu.mapapi.model.LatLng;
  */
 public class HeatMapDemo extends Activity {
 	@SuppressWarnings("unused")
-	private static final String LTAG = BaseMapDemo.class.getSimpleName();
+	private static final String LTAG = CampusMap.class.getSimpleName();
 	private MapView mMapView;
 	private BaiduMap mBaiduMap;
 	private HeatMap heatmap;

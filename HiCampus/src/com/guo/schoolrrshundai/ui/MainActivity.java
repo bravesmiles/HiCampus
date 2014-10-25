@@ -26,7 +26,7 @@ import com.guo.utils.Constants;
 import com.guo.utils.RestUtil;
 import com.smiles.campus.R;
 import com.smiles.campus.map.BMapApiDemoMain;
-import com.smiles.campus.map.BaseMapDemo;
+import com.smiles.campus.map.CampusMap;
 import com.smiles.campus.ui.listener.ButtonClickListener;
 
 public class MainActivity extends BaseActivity {

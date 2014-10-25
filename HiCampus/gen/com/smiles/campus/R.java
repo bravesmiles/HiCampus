@@ -722,6 +722,7 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f070002;
         public static final int app_name=0x7f070000;
+        public static final int campus_map=0x7f070004;
         public static final int cloud_search_tips=0x7f07003d;
         public static final int demo_desc_basemap=0x7f070006;
         public static final int demo_desc_bus=0x7f07002a;
@@ -742,7 +743,6 @@ public final class R {
         public static final int demo_desc_route=0x7f070024;
         public static final int demo_desc_share=0x7f070043;
         public static final int demo_desc_ui=0x7f070015;
-        public static final int demo_name_basemap=0x7f070004;
         public static final int demo_name_bus=0x7f070028;
         public static final int demo_name_cloud=0x7f070031;
         public static final int demo_name_control=0x7f070010;

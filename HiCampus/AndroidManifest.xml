@@ -39,15 +39,15 @@
         </activity>
         -->
         <activity
-            android:name=".map.BaseMapDemo"
+            android:name=".map.CampusMap"
             android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_basemap"
+            android:label="@string/campus_map"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".map.FragmentTableActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_basemap"
+            android:label="@string/campus_map"
             android:screenOrientation="portrait" >
         </activity>
         <activity

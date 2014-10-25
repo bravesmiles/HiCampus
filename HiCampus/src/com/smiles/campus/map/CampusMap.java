@@ -25,9 +25,9 @@ import com.smiles.campus.service.RestServiceImpl;
 /**
  * 演示MapView的基本用法
  */
-public class BaseMapDemo extends BaseActivity {
+public class CampusMap extends BaseActivity {
 	@SuppressWarnings("unused")
-	private static final String LTAG = BaseMapDemo.class.getSimpleName();
+	private static final String LTAG = CampusMap.class.getSimpleName();
 	private MapView mMapView;
 	private BaiduMap mBaiduMap;
 	

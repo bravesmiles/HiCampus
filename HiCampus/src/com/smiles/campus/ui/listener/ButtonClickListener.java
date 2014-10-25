@@ -4,7 +4,7 @@
 package com.smiles.campus.ui.listener;
 
 import com.guo.ui.base.BaseActivity;
-import com.smiles.campus.map.BaseMapDemo;
+import com.smiles.campus.map.CampusMap;
 import com.smiles.campus.ui.LoginActivity;
 import com.smiles.campus.utils.LogUtil;
 
@@ -51,10 +51,14 @@ public class ButtonClickListener implements OnClickListener {
 		
 		switch(text){
 		case "个人信息":
-			activity.openActivity(BaseMapDemo.class);
+			activity.openActivity(CampusMap.class);
+			activity.finish();
 			break;
 		case "登录":
 			LogUtil.log(LogUtil.USER_STATUS_TAG, "login request");
+			activity.showProgressDialog("Loading..");
+			activity.openActivity(CampusMap.class);
+			activity.cancelProgressDialog();
 			break;
 		case "取消":
 			LogUtil.log(LogUtil.USER_STATUS_TAG, "login canceled");
