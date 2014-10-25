@@ -52,11 +52,11 @@ public class ButtonClickListener implements OnClickListener {
 		switch(text){
 		case "个人信息":
 			activity.openActivity(CampusMap.class);
-			activity.finish();
 			break;
 		case "登录":
 			LogUtil.log(LogUtil.USER_STATUS_TAG, "login request");
 			activity.showProgressDialog("Loading..");
+			activity.finish();
 			activity.openActivity(CampusMap.class);
 			activity.cancelProgressDialog();
 			break;
