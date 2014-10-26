@@ -35,6 +35,10 @@ import com.smiles.campus.utils.LogUtil;
  * 
  */
 public class RestUtil {
+	
+	public static final String REG_URL = "http://www.bashukeji.com/mingzhiweixin/server/registAction.asp";
+	public static final String LOG_URL = "http://www.bashukeji.com/mingzhiweixin/phone/index.asp";
+
 	public static final String NET_ERROR = "neterror";
 
 	/**
@@ -50,7 +54,8 @@ public class RestUtil {
 	 *            BasicNameValuePair's parameters value
 	 * @return result
 	 */
-	public static String postData(Class<?> cls, String baseurl, String[] keyItem, String[] valueItem) {
+	public static String postData(Class<?> cls, String baseurl,
+			String[] keyItem, String[] valueItem) {
 		String resurl = baseurl + "?";
 		String result = null;
 		HttpClient httpClient = null;
@@ -71,7 +76,8 @@ public class RestUtil {
 			int timeoutConnection = 10000;
 			int timeoutSocket = 10000;
 			httpParameters = new BasicHttpParams();
-			HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
+			HttpConnectionParams.setConnectionTimeout(httpParameters,
+					timeoutConnection);
 			HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 			httpClient = new DefaultHttpClient(httpParameters);
 			HttpResponse httpResponse = httpClient.execute(httpPost);
@@ -99,20 +105,26 @@ public class RestUtil {
 	 * 
 	 * @param url
 	 *            the server url and parameters
-	 * @return result invoke eg: String return_str = new HttpDownloader().getDataFromNet(Config.GETHUSHI_AND_PATI_URL + "?loginid=" + Config.NOWPEOPLEID + "&loginpasswd=" + Config.NOWPEOPLEPASSWD +
-	 *         "&actions=GetPatiInfo2" + "&inpatiid=" + saomiaores);
+	 * @return result invoke eg: String return_str = new
+	 *         HttpDownloader().getDataFromNet(Config.GETHUSHI_AND_PATI_URL +
+	 *         "?loginid=" + Config.NOWPEOPLEID + "&loginpasswd=" +
+	 *         Config.NOWPEOPLEPASSWD + "&actions=GetPatiInfo2" + "&inpatiid=" +
+	 *         saomiaores);
 	 */
 	public static String getData(Class<?> cls, String url) {
 		HttpParams params = new BasicHttpParams();
 		HttpProtocolParams.setVersion(params, HttpVersion.HTTP_1_1);
-		HttpProtocolParams.setContentCharset(params, HTTP.DEFAULT_CONTENT_CHARSET);
+		HttpProtocolParams.setContentCharset(params,
+				HTTP.DEFAULT_CONTENT_CHARSET);
 		HttpProtocolParams.setUseExpectContinue(params, true);
 		ConnManagerParams.setMaxTotalConnections(params, 100);
 		HttpConnectionParams.setConnectionTimeout(params, 10000);
 		HttpConnectionParams.setSoTimeout(params, 10000);
 		SchemeRegistry schReg = new SchemeRegistry();
-		schReg.register(new Scheme("http", PlainSocketFactory.getSocketFactory(), 80));
-		ClientConnectionManager conMgr = new ThreadSafeClientConnManager(params, schReg);
+		schReg.register(new Scheme("http", PlainSocketFactory
+				.getSocketFactory(), 80));
+		ClientConnectionManager conMgr = new ThreadSafeClientConnManager(
+				params, schReg);
 
 		HttpClient httpClient = new DefaultHttpClient(conMgr, params);
 		HttpPost httpPost = new HttpPost(url);
@@ -126,8 +138,10 @@ public class RestUtil {
 				httpResponse = httpClient.execute(httpPost);
 				builder = new StringBuilder();
 				BufferedReader bufferedReader2 = null;
-				bufferedReader2 = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent()));
-				for (String s = bufferedReader2.readLine(); s != null; s = bufferedReader2.readLine()) {
+				bufferedReader2 = new BufferedReader(new InputStreamReader(
+						httpResponse.getEntity().getContent()));
+				for (String s = bufferedReader2.readLine(); s != null; s = bufferedReader2
+						.readLine()) {
 					builder.append(s);
 				}
 				if (builder != null) {
@@ -139,7 +153,8 @@ public class RestUtil {
 		} finally {
 			httpClient.getConnectionManager().shutdown();
 		}
-		LogUtil.print("url_from_" + cls.getSimpleName() + ":" + url + "    " + "result:" + return_str);
+		LogUtil.print("url_from_" + cls.getSimpleName() + ":" + url + "    "
+				+ "result:" + return_str);
 		return return_str;
 	}
 }

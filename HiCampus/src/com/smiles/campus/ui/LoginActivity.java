@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class LoginActivity extends BaseActivity {
 	
@@ -16,6 +17,9 @@ public class LoginActivity extends BaseActivity {
 	
 	private Button loginButton;
 	private Button cancelButton;
+
+	private EditText account;
+	private EditText password;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,8 @@ public class LoginActivity extends BaseActivity {
 		loginButton = (Button) findViewById(R.id.regist_submit_btn);
 		cancelButton= (Button) findViewById(R.id.regist_cancel_btn);
 
+		account = (EditText)findViewById(R.id.old_user_account);
+		password  = (EditText)findViewById(R.id.old_user_passwd);
 	}
 
 	@Override

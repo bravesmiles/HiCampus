@@ -4,6 +4,7 @@
 package com.smiles.campus.ui.listener;
 
 import com.guo.ui.base.BaseActivity;
+import com.smiles.campus.WebLoginActivity;
 import com.smiles.campus.map.CampusMap;
 import com.smiles.campus.ui.LoginActivity;
 import com.smiles.campus.utils.LogUtil;
@@ -44,6 +45,7 @@ public class ButtonClickListener implements OnClickListener {
 		} else {
 			LogUtil.log(LogUtil.USER_STATUS_TAG, "not logged");
 			if(!LoginActivity.isAlreadyHere()){
+//				activity.openActivity(WebLoginActivity.class);
 				activity.openActivity(LoginActivity.class);
 				return;
 			}

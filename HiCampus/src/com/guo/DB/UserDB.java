@@ -15,9 +15,9 @@ public class UserDB extends SQLiteOpenHelper {
 	private final static String TABLE_NAME = "user_table";
 	public final static String T_ID = "t_id";
 
-	public final static String USER_ACCOUNT = "user_account";
+	public final static String USER_ACCOUNT = "user_name";
 	public final static String USER_DEVICEID = "user_deviceid";
-	public final static String USER_NICKNAME = "user_nickname";
+	public final static String USER_NICKNAME = "nickName";
 	public final static String USER_PASSWD = "user_passwd";
 	public final static String USER_PHONE = "user_phone";
 	public final static String USER_EMAIL = "user_email";
@@ -35,8 +35,12 @@ public class UserDB extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		LogUtil.print("create db");
-		String sql = "CREATE TABLE " + TABLE_NAME + " (" + T_ID + " INTEGER primary key autoincrement, " + USER_DEVICEID + " text," + USER_ACCOUNT + " text, " + USER_NICKNAME + " text, "
-				+ USER_PASSWD + " text, " + USER_PHONE + " text, " + USER_EMAIL + " text, " + USER_QQ + " text, " + USER_CFT + " text, " + USER_ALIPAY + " text, " + USER_XUNLEI + " text, "
+		String sql = "CREATE TABLE " + TABLE_NAME + " (" + T_ID
+				+ " INTEGER primary key autoincrement, " + USER_DEVICEID
+				+ " text," + USER_ACCOUNT + " text, " + USER_NICKNAME
+				+ " text, " + USER_PASSWD + " text, " + USER_PHONE + " text, "
+				+ USER_EMAIL + " text, " + USER_QQ + " text, " + USER_CFT
+				+ " text, " + USER_ALIPAY + " text, " + USER_XUNLEI + " text, "
 				+ USER_KUAIBO + " text" + ");";
 		LogUtil.print("create db" + sql);
 		db.execSQL(sql);
@@ -52,7 +56,8 @@ public class UserDB extends SQLiteOpenHelper {
 
 	public Cursor select() {
 		SQLiteDatabase db = this.getReadableDatabase();
-		Cursor cursor = db.query(TABLE_NAME, null, null, null, null, null, null);
+		Cursor cursor = db
+				.query(TABLE_NAME, null, null, null, null, null, null);
 		return cursor;
 	}
 
@@ -62,7 +67,9 @@ public class UserDB extends SQLiteOpenHelper {
 		return cursor;
 	}
 
-	public long insert(String deviceId, String account, String nickName, String password, String phone, String email, String qq, String cft, String alipay, String xunlei, String kuaibo) {
+	public long insert(String deviceId, String account, String nickName,
+			String password, String phone, String email, String qq, String cft,
+			String alipay, String xunlei, String kuaibo) {
 		SQLiteDatabase db = this.getWritableDatabase();
 		/* ContentValues */
 		LogUtil.print("deviceId：" + deviceId + ";" + account);
@@ -89,7 +96,9 @@ public class UserDB extends SQLiteOpenHelper {
 		db.delete(TABLE_NAME, where, whereValue);
 	}
 
-	public void update(int id, String deviceId, String account, String nickName, String password, String phone, String email, String qq, String cft, String alipay, String xunlei, String kuaibo) {
+	public void update(int id, String deviceId, String account,
+			String nickName, String password, String phone, String email,
+			String qq, String cft, String alipay, String xunlei, String kuaibo) {
 		SQLiteDatabase db = this.getWritableDatabase();
 		String where = T_ID + " = ?";
 		String[] whereValue = { Integer.toString(id) };
