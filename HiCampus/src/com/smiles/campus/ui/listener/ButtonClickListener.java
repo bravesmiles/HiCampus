@@ -4,9 +4,9 @@
 package com.smiles.campus.ui.listener;
 
 import com.guo.ui.base.BaseActivity;
-import com.smiles.campus.WebLoginActivity;
 import com.smiles.campus.map.CampusMap;
 import com.smiles.campus.ui.LoginActivity;
+import com.smiles.campus.ui.WebLoginActivity;
 import com.smiles.campus.utils.LogUtil;
 
 import android.util.Log;
@@ -38,29 +38,32 @@ public class ButtonClickListener implements OnClickListener {
 		String text = (String) button.getText();
 
 		LogUtil.log(LogUtil.BUTTON_CLICK_TAG, text);
-//		Log.i("Button Clicked", text);
+		// Log.i("Button Clicked", text);
 
 		if (BaseActivity.isLogged()) {
 			LogUtil.log(LogUtil.USER_STATUS_TAG, "logged in");
 		} else {
 			LogUtil.log(LogUtil.USER_STATUS_TAG, "not logged");
-			if(!LoginActivity.isAlreadyHere()){
-//				activity.openActivity(WebLoginActivity.class);
+			if (!LoginActivity.isAlreadyHere()) {
+				// activity.openActivity(WebLoginActivity.class);
 				activity.openActivity(LoginActivity.class);
 				return;
 			}
 		}
-		
-		switch(text){
+
+		switch (text) {
 		case "个人信息":
 			activity.openActivity(CampusMap.class);
 			break;
 		case "登录":
 			LogUtil.log(LogUtil.USER_STATUS_TAG, "login request");
-			activity.showProgressDialog("Loading..");
-			activity.finish();
-			activity.openActivity(CampusMap.class);
-			activity.cancelProgressDialog();
+			if (activity.process()) {
+				activity.showProgressDialog("Loading..");
+				activity.finish();
+				activity.openActivity(CampusMap.class);
+				activity.cancelProgressDialog();
+			}
+
 			break;
 		case "取消":
 			LogUtil.log(LogUtil.USER_STATUS_TAG, "login canceled");

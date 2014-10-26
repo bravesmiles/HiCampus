@@ -120,4 +120,10 @@ public class MainActivity extends BaseActivity {
 		infoButton.setOnClickListener(btnClickListener);
 	}
 
+	@Override
+	public boolean process() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

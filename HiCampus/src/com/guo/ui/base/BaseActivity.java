@@ -95,6 +95,8 @@ public abstract class BaseActivity extends Activity {
 	 * 初始化控件
 	 */
 	protected abstract void initView();
+	
+	public abstract boolean process();	
 
 	/**
 	 * 通过类名启动Activity

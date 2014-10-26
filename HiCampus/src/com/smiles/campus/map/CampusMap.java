@@ -146,4 +146,10 @@ public class CampusMap extends BaseActivity {
 		
 	}
 
+	@Override
+	public boolean process() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

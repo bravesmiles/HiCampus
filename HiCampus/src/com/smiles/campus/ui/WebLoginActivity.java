@@ -1,6 +1,9 @@
-package com.smiles.campus;
+package com.smiles.campus.ui;
 
 import com.guo.ui.base.BaseActivity;
+import com.smiles.campus.R;
+import com.smiles.campus.R.id;
+import com.smiles.campus.R.layout;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -32,5 +35,11 @@ import android.webkit.WebView;
 	protected void initView() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public boolean process() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }

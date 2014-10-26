@@ -193,7 +193,7 @@
             android:label="@string/title_activity_login" >
         </activity>
         <activity
-            android:name=".WebLoginActivity"
+            android:name="com.smiles.campus.ui.WebLoginActivity"
             android:label="@string/title_activity_web_login" >
         </activity>
     </application>

@@ -8,7 +8,7 @@ import android.content.Context;
 
 public class Constants {
 
-	public final static String BASE_URL = "http://www.bashukeji.com/mingzhiweixin/";
+	public final static String PHONE_BASE_URL = "http://www.bashukeji.com/mingzhiweixin/phone/";
 	public final static String SERVER_URL = "http://61.139.95.212:8082/ShunBianEarn/user.do";
 	public final static String SERVER_DOWNLOAD_URL = "http://61.139.95.212:8082/ShunBianEarn/apk/user.do";
 	public final static String SERVER_UPDATE_URL = "http://61.139.95.212:8082/ShunBianEarn/apk/version.xml";
