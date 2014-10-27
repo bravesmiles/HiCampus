@@ -3,19 +3,15 @@ package com.smiles.campus.map;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import com.smiles.campus.R;
-import com.smiles.campus.map.LocationDemo.MyLocationListenner;
 import com.smiles.campus.service.RestServiceImpl;
 import com.smiles.campus.utils.LogUtil;
 
@@ -35,7 +31,6 @@ import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
-import com.baidu.mapapi.map.MyLocationConfiguration;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.map.TextOptions;
@@ -66,8 +61,8 @@ import com.baidu.mapapi.utils.DistanceUtil;
  * 此demo用来展示如何进行驾车、步行、公交路线搜索并在地图使用RouteOverlay、TransitOverlay绘制
  * 同时展示如何进行节点浏览并弹出泡泡
  */
-public class CampusMap extends Activity implements
-		BaiduMap.OnMapClickListener, OnGetRoutePlanResultListener {
+public class CampusMap extends Activity implements BaiduMap.OnMapClickListener,
+		OnGetRoutePlanResultListener {
 
 	private static final String LTAG = CampusMap.class.getSimpleName();
 
@@ -101,6 +96,9 @@ public class CampusMap extends Activity implements
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		// 在使用 SDK 各组间之前初始化 context 信息，传入 ApplicationContext
+//		SDKInitializer.initialize(this);
 
 		Intent intent = getIntent();
 		if (intent.hasExtra("x") && intent.hasExtra("y")) {
@@ -609,5 +607,4 @@ public class CampusMap extends Activity implements
 		mMapView.onDestroy();
 		super.onDestroy();
 	}
-
 }

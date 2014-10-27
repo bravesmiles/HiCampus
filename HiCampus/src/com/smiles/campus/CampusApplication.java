@@ -1,10 +1,10 @@
-package com.smiles.campus.map;
+package com.smiles.campus;
 
 import android.app.Application;
 
 import com.baidu.mapapi.SDKInitializer;
 
-public class DemoApplication extends Application {
+public class CampusApplication extends Application {
 
 	@Override
 	public void onCreate() {

@@ -5,13 +5,9 @@ package com.smiles.campus.ui.listener;
 
 import com.guo.ui.base.BaseActivity;
 import com.smiles.campus.map.CampusMap;
-import com.smiles.campus.map.LocationDemo;
-import com.smiles.campus.map.CampusMap;
 import com.smiles.campus.ui.LoginActivity;
-import com.smiles.campus.ui.WebLoginActivity;
 import com.smiles.campus.utils.LogUtil;
 
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;

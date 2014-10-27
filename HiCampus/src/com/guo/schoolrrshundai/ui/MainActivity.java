@@ -6,17 +6,13 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.baidu.mapapi.map.MyLocationConfiguration;
-import com.baidu.mapapi.map.MyLocationConfiguration.LocationMode;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.guo.adapter.ExchangedInfoAdapter;
@@ -25,7 +21,6 @@ import com.guo.ui.base.BaseActivity;
 import com.guo.utils.Constants;
 import com.guo.utils.RestUtil;
 import com.smiles.campus.R;
-import com.smiles.campus.map.CampusMap;
 import com.smiles.campus.ui.listener.ButtonClickListener;
 
 public class MainActivity extends BaseActivity {

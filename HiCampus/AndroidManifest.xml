@@ -9,7 +9,7 @@
         android:targetSdkVersion="10" />
 
     <application
-        android:name=".map.DemoApplication"
+        android:name=".CampusApplication"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <meta-data
@@ -25,148 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- <activity
-            android:name="com.smiles.campus.map.BMapApiDemoMain"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            android:label="BaiduMapSDKDemo" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity> -->
-        
         <activity
             android:name=".map.CampusMap"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/campus_map"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.FragmentTableActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/campus_map"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.MapFragmentDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_map_fragment"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.MultiMapViewDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_multimap"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.GeometryDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_geometry"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.LocationDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_location"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.MapControlDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_control"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.UISettingDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_ui"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.LayersDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_layers"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.OverlayDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_overlay"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.OfflineDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_offline"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.PoiSearchDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_poi"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.RoutePlanDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_route"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.GeoCoderDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_geocode"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.BusLineSearchDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_bus"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.HeatMapDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_heatmap"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.ShareDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_share"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.ShareDemoActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_share"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.NaviDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_navi"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.CloudSearchActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_cloud"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.CloudSearchDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/title_activity_cloud_search_demo"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".map.OpenglDemo"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/demo_name_opengl"
             android:screenOrientation="portrait" >
         </activity>
 
@@ -176,17 +38,6 @@
             android:process=":remote" >
         </service>
 
-        <!--
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login"
-            android:windowSoftInputMode="adjustResize|stateHidden" >
-        </activity>
-
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-        -->
         <activity
             android:name=".ui.LoginActivity"
             android:label="@string/title_activity_login" >

@@ -9,7 +9,6 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Spanned;
-import android.view.View.OnClickListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
