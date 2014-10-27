@@ -5,6 +5,8 @@ package com.smiles.campus.ui.listener;
 
 import com.guo.ui.base.BaseActivity;
 import com.smiles.campus.map.CampusMap;
+import com.smiles.campus.map.LocationDemo;
+import com.smiles.campus.map.CampusMap;
 import com.smiles.campus.ui.LoginActivity;
 import com.smiles.campus.ui.WebLoginActivity;
 import com.smiles.campus.utils.LogUtil;
@@ -60,7 +62,9 @@ public class ButtonClickListener implements OnClickListener {
 			if (activity.process()) {
 				activity.showProgressDialog("Loading..");
 				activity.finish();
+//				activity.openActivity(CampusMap.class);
 				activity.openActivity(CampusMap.class);
+//				activity.openActivity(LocationDemo.class);
 				activity.cancelProgressDialog();
 			}
 

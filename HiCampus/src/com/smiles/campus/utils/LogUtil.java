@@ -13,6 +13,7 @@ public class LogUtil {
 	
 	public static String DEBUG_TAG = "Debugging";
 	public static String USER_STATUS_TAG = "User Status";
+	public static String MAP_STATUS_TAG = "Map Status";
 	public static String BUTTON_CLICK_TAG = "Button Clicked";
 	
 	private static int logLevel = Log.DEBUG;

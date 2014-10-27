@@ -96,6 +96,10 @@ public abstract class BaseActivity extends Activity {
 	 */
 	protected abstract void initView();
 	
+	/**
+	 * Common process in the activity, return true or false
+	 * @return boolean
+	 */
 	public abstract boolean process();	
 
 	/**
