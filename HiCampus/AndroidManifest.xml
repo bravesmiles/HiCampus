@@ -3,6 +3,10 @@
     package="com.smiles.campus"
     android:versionCode="1"
     android:versionName="1.0" >
+    <!-- 郭总的包名 -->
+    <!-- package="com.guo.mywebsiteclient"
+    android:versionCode="170"
+    android:versionName="1.7.0" > -->
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -15,6 +19,10 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="Bd9Kbt681M39h9zsU2XxYaun" />
+        <!-- 配置KEY 2014-7-5 -->
+        <!-- <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="B52HMncnnd7VBFDYLLL6RnYG" /> -->
 
         <activity
             android:name="com.guo.schoolrrshundai.ui.MainActivity"
@@ -42,10 +50,10 @@
             android:name=".ui.LoginActivity"
             android:label="@string/title_activity_login" >
         </activity>
-        <activity
+        <!-- <activity
             android:name="com.smiles.campus.ui.WebLoginActivity"
             android:label="@string/title_activity_web_login" >
-        </activity>
+        </activity> -->
     </application>
 
     <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >
@@ -91,6 +99,9 @@
     </uses-permission>
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- <permission
+        android:name="com.guo.mywebsiteclient.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" /> -->
 
     <supports-screens
         android:anyDensity="true"

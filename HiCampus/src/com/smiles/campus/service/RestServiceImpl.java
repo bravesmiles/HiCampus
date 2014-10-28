@@ -25,6 +25,13 @@ public class RestServiceImpl implements RestService{
 		LatLng point = new LatLng(39.91923, 116.327428); 
 		return point;
 	}
+
+	@Override
+	public LatLng getLocOfMine(double lat, double lng) {
+		// TODO Auto-generated method stub
+		LatLng point = new LatLng(lat, lng); 
+		return point;
+	}
 	
 
 }

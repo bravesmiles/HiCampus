@@ -30,7 +30,7 @@ public class MainActivity extends BaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_push_main);
 		init();
 		// mCurrentMode = LocationMode.NORMAL;
 		// requestLocButton.setText("普通");
@@ -104,7 +104,7 @@ public class MainActivity extends BaseActivity {
 		// TODO Auto-generated method stub
 		exchangedInfo_listview = (ListView) findViewById(R.id.exchangedInfo_listview);
 		// Binding UI and action
-		infoButton = (Button) findViewById(R.id.button2);
+		infoButton = (Button) findViewById(R.id.personal_center);
 	}
 
 	@Override

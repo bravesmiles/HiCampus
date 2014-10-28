@@ -52,7 +52,7 @@ public class LoginActivity extends BaseActivity {
 	private boolean login() {
 		String userName = this.account.getText().toString();
 		String password = this.password.getText().toString();
-		String verifyCode = this.verifyCode.getText().toString();
+//		String verifyCode = this.verifyCode.getText().toString();
 		
 		LogUtil.log(LogUtil.USER_STATUS_TAG, userName + ", " + password + ", " + verifyCode);
 		
@@ -68,8 +68,8 @@ public class LoginActivity extends BaseActivity {
 		account = (EditText) findViewById(R.id.old_user_account);
 		password = (EditText) findViewById(R.id.old_user_passwd);
 
-		verifyImage = (ImageView) findViewById(R.id.verify_img);
-		verifyCode = (EditText) findViewById(R.id.verify_code);
+//		verifyImage = (ImageView) findViewById(R.id.verify_img);
+//		verifyCode = (EditText) findViewById(R.id.verify_code);
 	}
 
 	@Override

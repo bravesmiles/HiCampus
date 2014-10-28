@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/linear_selector"
+    android:padding="5dip" >
+
+    <ImageView
+        android:id="@+id/item_custom_imgv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/jpush_notification_icon" />
+
+    <TextView
+        android:id="@+id/offwall_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:text="推荐应用渠道一号线"
+        android:textColor="#333"
+        android:textSize="15sp" />
+
+</LinearLayout>
