@@ -29,11 +29,11 @@ import com.guo.config.Constants;
 import com.guo.entity.Express;
 //import com.guo.mywebsiteclient.R;
 import com.guo.schoolrrshundai.ui.Daigou;
-import com.guo.schoolrrshundai.ui.MapActivity;
 import com.guo.schoolrrshundai.ui.PersonalActivity;
 import com.guo.schoolrrshundai.ui.SendExpress;
 import com.guo.utils.DataPoster;
 import com.smiles.campus.R;
+import com.smiles.campus.map.MapActivity;
 
 public class PushMainActivity extends InstrumentedActivity implements OnClickListener {
 

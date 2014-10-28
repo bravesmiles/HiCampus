@@ -1,4 +1,4 @@
-package com.guo.schoolrrshundai.ui;
+package com.smiles.campus.map;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;

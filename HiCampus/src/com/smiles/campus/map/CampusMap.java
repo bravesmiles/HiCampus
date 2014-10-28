@@ -58,8 +58,7 @@ import com.baidu.mapapi.search.route.WalkingRouteResult;
 import com.baidu.mapapi.utils.DistanceUtil;
 
 /**
- * 此demo用来展示如何进行驾车、步行、公交路线搜索并在地图使用RouteOverlay、TransitOverlay绘制
- * 同时展示如何进行节点浏览并弹出泡泡
+ * 实现核心的地图功能，包括：定位（30s定时上传）、路径显示（两点）、时间估算
  */
 public class CampusMap extends Activity implements BaiduMap.OnMapClickListener,
 		OnGetRoutePlanResultListener {
