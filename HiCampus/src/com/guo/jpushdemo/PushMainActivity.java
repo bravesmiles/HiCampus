@@ -33,6 +33,7 @@ import com.guo.schoolrrshundai.ui.PersonalActivity;
 import com.guo.schoolrrshundai.ui.SendExpress;
 import com.guo.utils.DataPoster;
 import com.smiles.campus.R;
+import com.smiles.campus.map.CampusMap;
 import com.smiles.campus.map.MapActivity;
 
 public class PushMainActivity extends InstrumentedActivity implements OnClickListener {
@@ -130,7 +131,8 @@ public class PushMainActivity extends InstrumentedActivity implements OnClickLis
 			startActivity(new Intent(PushMainActivity.this, Daigou.class));
 			break;
 		case R.id.personal_center:
-			startActivity(new Intent(PushMainActivity.this, PersonalActivity.class));
+//			startActivity(new Intent(PushMainActivity.this, PersonalActivity.class));
+			startActivity(new Intent(PushMainActivity.this, CampusMap.class));
 			break;
 		}
 	}
